@@ -30,8 +30,9 @@ public class PaymentController {
     @Autowired
     private EurekaDiscoveryClient discoveryClient;
 
+
     @PostMapping(value = "/payment/create")
-    public CommonResult create(@RequestBody Payment payment) {
+    public CommonResult create(@RequestBody Payment payment){
         int result = paymentService.create(payment);
         log.info("******插入结果: " + result);
         if (result > 0) {
@@ -46,7 +47,7 @@ public class PaymentController {
         Payment payment = paymentService.getPaymentById(id);
         log.info("***查询结果：" + payment);
         if (payment != null) {
-            return new CommonResult(200, "查询数据成功,serverport:" + SERVER_PORT, payment);
+            return new CommonResult(200, "查询数据成功,serverport: " + SERVER_PORT, payment);
         } else {
             return new CommonResult(444, "没有对应记录", null);
         }
@@ -66,6 +67,4 @@ public class PaymentController {
 
         return this.discoveryClient;
     }
-
-
 }
