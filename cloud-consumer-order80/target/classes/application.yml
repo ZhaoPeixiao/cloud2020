@@ -14,3 +14,10 @@ eureka:
 #      defaultZone: http://localhost:7001/eureka/ # 入驻地址
       defaultZone: http://eureka7001.com:7001/eureka/, http://eureka7002.com:7002/eureka/ # 入驻地址
 
+  instance:
+    instance-id: order80
+    prefer-ip-address: true
+
+info:
+  app.name: peixiao-microservicecloud
+  company.name: www.peixiao.com
