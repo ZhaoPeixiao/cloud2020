@@ -33,3 +33,4 @@ eureka:
     instance-id: receive-8802.com #主机名
     prefer-ip-address: true # 显示ip
 
+
