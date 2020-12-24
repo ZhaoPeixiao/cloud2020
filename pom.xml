@@ -35,6 +35,9 @@
     <module>cloudalibaba-consumer-nacos-order83</module>
       <module>cloudalibaba-config-nacos-client3377</module>
       <module>cloudalibaba-sentinel-service8401</module>
+      <module>cloudalibaba-provider-payment9003</module>
+    <module>cloudalibaba-provider-payment9004</module>
+    <module>cloudalibaba-consumer-nacos-order84</module>
   </modules>
 
   <packaging>pom</packaging>
@@ -67,6 +70,10 @@
   <!-- 子模块继承之后，提供作用，锁定版本+子module不用写groupId和version -->
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>com.alibaba.csp</groupId>
+        <artifactId>sentinel-datasource-nacos</artifactId>
+      </dependency>
       <!--spring boot 2.2.2-->
       <dependency>
         <groupId>org.springframework.boot</groupId>
